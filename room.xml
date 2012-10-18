@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<hallway>
+	<room>
+		<id>1</id>
+		<description>There is a door to your right</description>
+		<extra>the door is not locked</extra>
+		<options>
+			<action>
+				<aid>1</aid>
+				<opt>search</opt>
+				<out>you find nothing</out>
+				<exc></exc>
+			</action>
+			<action>
+				<aid>2</aid>
+				<opt>Open Door</opt>
+				<out>You move to the Next room</out>
+				<exc>/next</exc>
+			</action>
+		</options>
+	</room>
+	<room>
+		<id>2</id>
+		<description>You walk into a room with a table and a stone door</description>
+		<extra>the table is brittle</extra>
+		<options>
+			<action>
+				<aid>1</aid>
+				<opt>Die</opt>
+				<out>You are dead</out>
+				<exc>/kill</exc>
+			</action>
+			<action>
+				<aid>2</aid>
+				<opt>Open Door</opt>
+				<out>You move to the Next room</out>
+				<exc>/next</exc>
+			</action>
+		</options>
+	</room>
+	<room>
+		<id>3</id>
+		<description>You enter a room with a man, his back is facing away</description>
+		<extra>the is wearing leather armour</extra>
+		<options>
+			<action>
+				<aid>1</aid>
+				<opt>Attack!</opt>
+				<out>you kill him</out>
+				<exc>/next</exc>
+			</action>
+			<action>
+				<aid>2</aid>
+				<opt>try to talk to him</opt>
+				<out>he attacks you</out>
+				<exc>/dam</exc>
+			</action>
+		</options>
+	</room>
+</hallway>
