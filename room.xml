@@ -57,4 +57,48 @@
 			</action>
 		</options>
 	</room>
+    	<room>
+		<id>4</id>
+		<description>You enter a room with a fireplace and a pot, there is a door to your left</description>
+		<extra>The pot looks hot, it is steaming.</extra>
+		<options>
+			<action>
+				<aid>1</aid>
+				<opt>Ignore the pot and open the door</opt>
+				<out>The door sticks but opens</out>
+				<exc>/next</exc>
+			</action>
+			<action>
+				<aid>2</aid>
+				<opt>Take pot out of fireplace</opt>
+				<out>You are burned</out>
+				<exc>/dam</exc>
+			</action>
+            <action>
+				<aid>3</aid>
+				<opt>Observe pot</opt>
+				<out>Its steaming like its very hot</out>
+				<exc></exc>
+			</action>
+		</options>
+	</room>
+    	<room>
+		<id>5</id>
+		<description>You step in front of a flight of steps, you see sunlight at the bottem.</description>
+		<extra>You can hear screams outside</extra>
+		<options>
+			<action>
+				<aid>1</aid>
+				<opt>Run down stairs</opt>
+				<out>you trip and crack your head</out>
+				<exc>/kill</exc>
+			</action>
+			<action>
+				<aid>2</aid>
+				<opt>wait a second</opt>
+				<out>The man who you thought you killed strangles you</out>
+				<exc>/kill</exc>
+			</action>
+		</options>
+	</room>
 </hallway>
