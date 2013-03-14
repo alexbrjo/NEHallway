@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <hallway>
+	<name>Orignial NEH map</name>
+	<desc>Fight the orcs</desc>
+	<win>Congratulations you won!</win>
+	<lose>You died before killing the orcs! loser</lose>
 	<room>
 		<id>1</id>
 		<description>There is a door to your right</description>
@@ -57,7 +61,7 @@
 			</action>
 		</options>
 	</room>
-    	<room>
+    <room>
 		<id>4</id>
 		<description>You enter a room with a fireplace and a pot, there is a door to your left</description>
 		<extra>The pot looks hot, it is steaming.</extra>
@@ -82,7 +86,7 @@
 			</action>
 		</options>
 	</room>
-    	<room>
+    <room>
 		<id>5</id>
 		<description>You step in front of a flight of steps, you see sunlight at the bottem.</description>
 		<extra>You can hear screams outside</extra>
@@ -93,12 +97,56 @@
 				<out>you trip and crack your head</out>
 				<exc>/kill</exc>
 			</action>
-			<action>
+            <action>
 				<aid>2</aid>
+				<opt>Walk down stairs</opt>
+				<out>you progess, behind you a man falls down the stairs</out>
+				<exc>/next</exc>
+			</action>
+			<action>
+				<aid>3</aid>
 				<opt>wait a second</opt>
 				<out>The man who you thought you killed strangles you</out>
 				<exc>/kill</exc>
 			</action>
 		</options>
 	</room>
+    <room>
+        <id>6</id>
+        <description>You are in a grassy field and you are free of the hall! but the screams draw closer</description>
+		<extra>The grass is red in patches</extra>
+        		<options>
+			<action>
+				<aid>1</aid>
+				<opt>Walk towards the screams</opt>
+				<out>You see orcs in the forest with a hostage</out>
+				<exc>/next</exc>
+			</action>
+			<action>
+				<aid>2</aid>
+				<opt>wait</opt>
+				<out>The man that fell down the stairs beats your head in</out>
+				<exc>/kill</exc>
+			</action>
+		</options>
+    </room>
+    <room>
+        <id>7</id>
+        <description>As you draw closer you watch the orcs drag their meal into a tunnel</description>
+		<extra>You see 3 orcs</extra>
+        <options>
+			<action>
+				<aid>1</aid>
+				<opt>Walk towards the screams</opt>
+				<out>You see orcs in the forest with a hostage</out>
+				<exc>/next</exc>
+			</action>
+			<action>
+				<aid>2</aid>
+				<opt>Take a breather</opt>
+				<out>You regain some health</out>
+				<exc>/heal</exc>
+			</action>
+		</options>
+    </room>
 </hallway>

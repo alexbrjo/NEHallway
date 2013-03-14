@@ -1,7 +1,15 @@
 #!/usr/bin/env ruby - w
 class Map
 	def initialize(doc)
+		@name = ""
+		@desc = ""
 		@rooms = []
+		@winMsg = ""
+		@loseMsg = ""
+		doc.elements.each("hallway/name"){|i| @name = i.text}
+		doc.elements.each("hallway/desc"){|i| @desc = i.text}
+		doc.elements.each("hallway/win"){|i| @winMsg = i.text}
+		doc.elements.each("hallway/lose"){|i| @loseMsg = i.text}
 		doc.elements.each("hallway/room") {|room| 
 			id = 0
 			desc = "default"
@@ -27,6 +35,18 @@ class Map
 	end
 	def getSize() 
 		return @rooms.size
+	end
+	def getInfo() 
+		return @name + " : " + @desc
+	end
+	def getName() 
+		return @name
+	end
+	def getWin() 
+		return @winMsg
+	end
+	def getLose() 
+		return @loseMsg
 	end
 	def getRoom(n) 
 		return @rooms[n]
